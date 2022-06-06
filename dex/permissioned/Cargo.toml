@@ -1,0 +1,15 @@
+[package]
+name = "serum-dex-permissioned"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+anchor-lang =  { path = "../../../anchor/lang" }
+anchor-spl = { path = "../../../anchor/spl" ,features=["dex"] }
+
+  [dependencies.serum_dex]
+  path = "../"
+
+  [dependencies.safe-token]
+  features = [ "no-entrypoint" ]
+  path = "../../../safecoin-program-library/token/program"
